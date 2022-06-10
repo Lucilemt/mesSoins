@@ -1,0 +1,163 @@
+body{
+    background-image: url(../img/bghomepage.jpg) ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Exo 2', sans-serif;
+}
+.logo{
+    text-decoration: none;
+}
+#caducee{
+    position: fixed;
+    height: 6rem;
+    width: 6rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
+}
+#messoins{
+    color: white;
+    font-size: large;
+    margin-left: 10rem;
+    margin-top: 3rem;
+}
+.boutonsconnexion{
+    display: flex;
+    justify-content: end;
+    margin-top: -2rem;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+#connexionPatient{
+    align-items: flex-end;
+    background-color: #FA7BC9;
+    color: white;
+    margin-right: 0.3rem;
+    border-radius: 0.8rem 0.8rem 0.8rem 0.8rem;
+}
+
+#connexionPatient:hover{
+    background-color: white;
+    color: #FA7BC9
+}
+
+#connexionPS{
+    background-color: #5E17EB;
+    color: white;
+    border-radius: 0.8rem 0.8rem 0.8rem 0.8rem;
+}
+#connexionPS:hover{
+    color: #5E17EB;
+    background-color: white;
+}
+@media screen and (max-width: 1024px){
+    body{
+        background-image: url(../img/bgmedia.jpg);
+    }
+    .logo{
+        display: flex;
+    }
+    #caducee{
+        display: none;
+    }
+    #messoins{
+        color: black;
+        text-align: center;
+        justify-content: center;
+        font-size: larger;
+        margin-left: 8rem;
+
+    }
+    .boutonsconnexion{
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        
+    }
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+/* #degrade1{
+    background: linear-gradient(#FF66C4, #5E17EB);
+    height: 15rem;
+    width: 5rem;
+    content: "";
+    border-radius: 15rem 15rem 0 0;
+    transform: rotate(40deg);
+    transform-origin: 100% 100%;
+    position: absolute;
+    bottom: -10%;
+    right: 15%;
+}
+
+#degrade2{
+    background: linear-gradient(#5E17EB, #FF66C4);
+    height: 50rem;
+    width: 20rem;
+    content: "";
+    border-radius: 15rem 15rem 0 0;
+    transform: rotate(40deg);
+    transform-origin: 100% 100%;
+    position: absolute;
+    bottom: -15%;
+    left: -15%;
+}
+
+#degrade3{
+    background: linear-gradient(#FF66C4, #5E17EB);
+    height: 25rem;
+    width: 12rem;
+    content: "";
+    border-radius: 0 0 15rem 15rem ;
+    transform: rotate(40deg);
+    transform-origin: 100% 100%;
+    position: absolute;
+    top: -12%;
+    left: -4%;
+}
+
+#rond1violet{
+    background: #E9DEFF;
+    height: 10rem;
+    width: 10rem;
+    content: "";
+    border-radius: 15rem 15rem 15rem 15rem;
+    position: absolute;
+} */
+

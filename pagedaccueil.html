@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- jQuery CSS -->
+    <link rel="stylesheet" href="CSS/jquery-ui.css" type="text/css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"
+    ></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js" integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"
+    ></script>
+    <!-- Mon JS -->
+    <script src="JS/messoins.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"
+    />
+    <!-- Font Google Exo2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet"
+    />
+    <!-- Mon CSS -->
+    <link rel="stylesheet" href="CSS/index.css" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- en-tête -->
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <a class="logo" href="#">
+                    <img id="caducee" src="img/caduceeV1_logo.png" alt="logocaducee" />
+                    <p id="messoins">messoins.fr</p>
+                </a>
+            </div>
+            <div class="boutonsconnexion">
+                <button id="connexionPatient" class="btn">Se connecter</button>
+                <button class="btn" id="connexionPS">
+                    Accès pour les professionnels
+                </button>
+            </div>
+        </div>
+    </div>
+
+        
+        <!-- Bulles background -->
+        <!-- <div id="degrade1"></div>
+            <div id="degrade2">
+                <div id="rond1violet"></div>
+            </div>
+            <div id="degrade3"></div> -->
+    <!-- modal connexion patient -->
+    <div class="modalBoxPatient" style="display: none;">
+        <section> <!-- class="vh-100" -->
+            <div class="container-fluid h-custom">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-9 col-lg-6 col-xl-5">
+                        <img src="img/doctorF-logo.png" class="img-fluid" alt="docteur_logo"/>
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-end">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <form>
+                            <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                                <p class="lead fw-normal mb-0 me-3">Se connecter avec</p>
+                                <button type="button" id="connexionPatient" class="btn btn-floating mx-1">
+                                    <i class="fab fa-facebook-f">mettre logo gmail</i>
+                                </button>
+                            </div>
+
+                            <div class="divider d-flex align-items-center my-4">
+                                <p class="text-center fw-bold mx-3 mb-0">Ou</p>
+                            </div>
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control form-control-lg" placeholder="Entrez votre adresse email"/>
+                                <label class="form-label" for="form3Example3">Adresse email</label>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-3">
+                                <input type="password" id="form3Example4" class="form-control form-control-lg" placeholder="Entrez votre mot de passe"/>
+                                <label class="form-label" for="form3Example4">Mot de passe</label>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Checkbox -->
+                                <div class="form-check mb-0">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3"/>
+                                    <label class="form-check-label" for="form2Example3">
+                                    Se souvenir de moi
+                                    </label>
+                                </div>
+                                <a href="#!" class="text-body">Mot de passe oublié ?</a>
+                            </div>
+
+                            <div class="text-center text-lg-start mt-4 pt-2">
+                                <button type="button" id="connexionPatient" class="btn btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem">
+                                    Se connecter
+                                </button>
+                                <p class="small fw-bold mt-2 pt-1 mb-0">
+                                    Pas de compte ?
+                                    <a href="#!" class="link-danger">Enregistrez-vous</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Modal connexion professionnel -->
+    <div class="modalBoxPrat" style="display: none;">
+        <section> <!-- class="vh-100" -->
+            <div class="container-fluid h-custom">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-9 col-lg-6 col-xl-5">
+                        <img src="img/doctorF-logo.png" class="img-fluid" alt="docteur_logo"/>
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-end">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <form>
+                            <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                                <p class="lead fw-normal mb-0 me-3">Se connecter avec</p>
+                                <button type="button" id="connexionPS" class="btn btn-floating mx-1">
+                                    <i class="fab fa-facebook-f">mettre logo gmail</i>
+                                </button>
+                            </div>
+
+                            <div class="divider d-flex align-items-center my-4">
+                                <p class="text-center fw-bold mx-3 mb-0">Ou</p>
+                            </div>
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control form-control-lg" placeholder="Entrez votre adresse email"/>
+                                <label class="form-label" for="form3Example3">Adresse email</label>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-3">
+                                <input type="password" id="form3Example4" class="form-control form-control-lg" placeholder="Entrez votre mot de passe"/>
+                                <label class="form-label" for="form3Example4">Mot de passe</label>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Checkbox -->
+                                <div class="form-check mb-0">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3"/>
+                                    <label class="form-check-label" for="form2Example3">
+                                    Se souvenir de moi
+                                    </label>
+                                </div>
+                                <a href="#!" class="text-body">Mot de passe oublié ?</a>
+                            </div>
+
+                            <div class="text-center text-lg-start mt-4 pt-2">
+                                <button type="button" id="connexionPS" class="btn btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem">
+                                    Se connecter
+                                </button>
+                                <p class="small fw-bold mt-2 pt-1 mb-0">
+                                    Pas de compte ?
+                                    <a href="#!" class="link-danger">Enregistrez-vous</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
